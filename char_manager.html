@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DND Manager</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale= 1" />
+	<link rel="apple-touch-icon" href="mwad_icon.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+  </head>
+  <body> 
+
+    <div data-role="page" id="home">
+      <div data-role="header" data-theme="b">
+        <h1>DND Manager</h1>
+		<a href="#about" data-role="button" class="ui-btn-right" data-transition="flip">About</a>
+      </div><!-- /header -->
+      <div data-role="content" data-theme="b" data-transition"flip" >
+        <ul data-role="listview" data-theme="g" data-inset="true" >
+        	<li><a href="#character">Character</a></li>
+         	<li><a href="#inventory">Inventory</a></li>
+         	<li><a href="#party">Party</a></li>
+			<li><a href="#mobs">Encounters</a></li>
+			<li><a href="#story">Story</a></li>
+			<li><a href="#maps">Maps</a></li>
+         </ul>
+      </div><!-- /content -->
+
+      <div data-role="footer" data-theme="b">
+        <h4>&copy;Platika 2011</h4>
+      </div><!-- /header -->
+    </div><!-- /page -->
+
+    <div data-role="page" id="character">
+      <div data-role="header" data-theme="b">
+        <h1>Character</h1>
+      </div><!-- /header -->
+
+
+	<div data-role="content" data-theme="b">
+	    <ul data-role="listview" data-theme "g" data-inset="true" data-filter="true">
+	    	<li><img src="char_profile_pic/aslan.png" /> <a href="#aslan">Aslan</a></li>
+	    	<li><img src="char_profile_pic/duseng.png" /><a href="#duseng">Du Seng</a></li>
+	    	<li><img src="char_profile_pic/zaratull.png" /><a href="#zaratull">Zaratull</a></li>
+	    	<li><img src="char_profile_pic/zod.png" /><a href="#zod">Zod</a></li>
+	    	</ul>
+		</div>
+
+	  <div data-role="footer" data-theme="b">
+        <h4>&copy;Platika 2011</h4>
+      </div>
+    </div><!-- /page -->
+
+   
+
+    <div data-role="page" id="inventory">
+      <div data-role="header" data-theme="b">
+        <h1>Inventory</h1>
+      </div><!-- /header -->
+
+	<div data-role="content" data-theme="b">
+	<ul data-role="listview" data-theme="g" data-inset="true" data-filter="true">
+		<li><img src="char_profile_pic/aslan.png" /> <a href="#aslan_inv">Aslan</a></li>
+		<li><img src="char_profile_pic/duseng.png" /><a href="#duseng_inv">Du Seng</a></li>
+		<li><img src="char_profile_pic/zaratull.png" /><a href="#zaratull_inv">Zaratull</a></li>
+		<li><img src="char_profile_pic/zod.png" /><a href="#zod_inv">Zod</a></li>
+		</ul>
+	</div>
+
+      <div data-role="footer" data-theme="b">
+        <h4>&copy;Platika 2011</h4>
+      </div>
+    </div><!-- /page -->
+
+    	<div data-role="page" id="aslan_inv">
+			<div data-role="header" data-theme="b">
+				<h1>Aslan</h1>
+			</div><!--/header-->
+			
+		<div data-role="content" data-theme="b">
+		<ul data-role="listview" data-theme="g" data-inset="true" data-filter="true" data-transition="pop">
+			<li><a img src="inventory/aslan/1.png">Gloves of Piercing</a></li>
+			<li><a img src="inventory/aslan/2.png">Rod of Forceful Invocation</a></li>
+			<li><a img src="inventory/aslan/3.png">Boots of Dryad</a></li>
+			<li><a img src="inventory/aslan/4.png">Counterstrike Guards</a></li>
+			<li><a img src="inventory/aslan/5.png">Piecemeal Chainmail</a></li>
+			<li><a img src="inventory/aslan/6.png">Amulet of Protection</a></li>
+		</ul>
+	   </div>
+			
+		<div data-role="footer" data-theme="b">
+			<h4>&copy;Platika 2011</h4>
+		 </div>
+		</div><!--/page-->
+
+ 	<div data-role="page" id="party">
+      <div data-role="header" data-theme="b">
+        <h1>Party</h1>
+      </div><!-- /header -->
+
+      <div data-role="content" data-theme="b">
+        <h3>Welcome to the Party Hub!</h3>
+      </div><!-- /content -->
+
+	<div data-role="content" data-theme="b">
+	<ul data-role="listview" data-theme "g" data-inset="true" data-filter="true">
+		<li><img src="player_profile_pic/aduff.jpg" width="400px" /> <a href="#aduff">Andrew Duff</a></li>
+		<li><img src="player_profile_pic/cconroy.jpg" width="400px" /><a href="#cconroy">Chris Conroy</a></li>
+		<li><img src="player_profile_pic/cplatika.jpg" width="400px" /><a href="#cplatika">Chris Platika</a></li>
+		<li><img src="player_profile_pic/storretti.jpg" width="400px" /><a href="#storretti">Santino Torretti</a></li>
+		</ul>
+		</div>
+
+     	<style>
+      		.nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 50px !important; }
+      		.nav-glyphish-example .ui-btn .ui-icon {  height: 50px!important; margin-left: -10px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+      		#chat .ui-icon { background:  url(icons/88-beer-mug.png) 50% 50% no-repeat; background-size: 22px 27px; }
+      		#email .ui-icon { background:  url(icons/131-tower.png) 50% 50% no-repeat; background-size: 15px 24px;  }
+      		#gear .ui-icon { background:  url(icons/134-viking.png) 50% 50% no-repeat;  background-size: 26px 17px; }
+      	</style>
+
+      	<div data-role="footer" class="nav-glyphish-example">
+      		<div data-role="navbar" class="nav-glyphish-example">
+      		<ul>
+      			<li><a href="#" data-theme="b" id="chat" data-icon="custom">Chat</a></li>
+      			<li><a href="#" data-theme="b" id="email" data-icon="custom">Email</a></li>
+      			<li><a href="#" data-theme="b" id="gear" data-icon="custom">Settings</a></li>
+      		</ul>
+      		</div>
+      	</div>
+    </div><!-- /page -->
+
+	<div data-role="page" id="mobs">
+	      <div data-role="header" data-theme="b">
+	        <h1>Encounters</h1>
+	      </div><!-- /header -->
+
+
+		<div data-role="content" data-theme="b">
+		<ul data-role="listview" data-theme="g" data-inset="true" data-filter="true">
+			<li><img src="char_profile_pic/aslan.png" /> <a href="#aslan">Aslan</a></li>
+			<li><img src="char_profile_pic/duseng.png" /><a href="#duseng">Du Seng</a></li>
+			<li><img src="char_profile_pic/zaratull.png" /><a href="#zaratull">Zaratull</a></li>
+			<li><img src="char_profile_pic/zod.png" /><a href="#zod">Zod</a></li>
+			</ul>
+			</div>
+
+	      <div data-role="footer" data-theme="b">
+	        <h4>&copy;Platika 2011</h4>
+	      </div>
+	    </div><!-- /page -->
+	   
+	
+	 <div data-role="page" id="story">
+	      <div data-role="header" data-theme="b">
+	        <h1>Story</h1>
+	      </div><!-- /header -->
+
+
+		<div data-role="content" data-theme="b">
+		   <p> Content Goes Here </p>
+			</div>
+
+		  <div data-role="footer" data-theme="b">
+	        <h4>&copy;Platika 2011</h4>
+	      </div>
+	    </div><!-- /page -->
+	    
+	
+	<div data-role="page" id="maps">
+	      <div data-role="header" data-theme="b">
+	        <h1>Maps</h1>
+	      </div><!-- /header -->
+
+
+		<div data-role="content" data-theme="b">
+		    <ul data-role="listview" data-theme="g" data-inset="true" data-filter="true">
+		    	<li><img src="maps/forest.png" /> <a href="#forest">Forest</a></li>
+		    	</ul>
+			</div>
+
+		  <div data-role="footer" data-theme="b">
+	        <h4>&copy;Platika 2011</h4>
+	      </div>
+	    </div><!-- /page -->
+	
+			<div data-role="page" id="forest" data-fullscreen="true">
+				<div data-role="header" data-theme="b"  data-position="fixed">
+					<h1>Forest</h1>
+				</div>
+				
+	   			<div data-role="content" data-theme="b">
+	   				<p><img src="maps/forest.png" /></p>
+	   			</div>
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<h4>&copy; Platika 2011</h4>
+			</div>
+		</div><!-- /page -->
+
+		
+  </body>
+</html>
