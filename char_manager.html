@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" />
     <script src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
+	<script src="scripts/dice.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale= 1" />
 	<link rel="apple-touch-icon" href="mwad_icon.png" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1674,6 +1675,8 @@
 	  	  </div><!-- /page -->
 	
 <!--End of Inventory-->
+
+<!-- Start of Party -->
 	
  	<div data-role="page" id="party">
       <div data-role="header" data-theme="b">
@@ -1712,6 +1715,7 @@
       	</div>
     </div><!-- /page -->
 
+
 	<div data-role="page" id="mobs">
 	      <div data-role="header" data-theme="b">
 	        <h1>Encounters</h1>
@@ -1748,6 +1752,7 @@
 	      </div>
 	    </div><!-- /page -->
 	    
+<!--Start of Maps-->
 	
 	<div data-role="page" id="maps">
 	      <div data-role="header" data-theme="b">
@@ -1778,7 +1783,65 @@
 				<h4>&copy; Platika 2011</h4>
 			</div>
 		</div><!-- /page -->
+<!--End of Maps-->
 
-		
+<!--Start of Dice Roller-->
+	
+
+		<div data-role="page" id="dice">
+			<div data-role="header" data-theme="b">
+				<h1>Dice Roller</h1>
+			</div>
+			
+			<div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup">
+			    	<legend>Choose Dice</legend>
+			         	<input type="radio" name="sides" id="D3" value="die = 3" checked="checked" />
+			         	<label for="D3">D3</label>
+
+			         	<input type="radio" name="sides" id="D6" value="die = 6"  />
+			         	<label for="D6">D6</label>
+
+			         	<input type="radio" name="sides" id="D8" value="die = 8"  />
+			         	<label for="D8">D8</label>
+
+			         	<input type="radio" name="sides" id="D10" value="die = 10"  />
+			         	<label for="D10">D10</label>
+			
+			         	<input type="radio" name="sides" id="D12" value="die = 12"  />
+			         	<label for="D12">D12</label>
+			
+			         	<input type="radio" name="sides" id="D20" value="die = 20"  />
+			         	<label for="D20">D20</label>
+			    </fieldset>
+			</div>
+			<div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup">
+			    	<legend>Choose Number of Dice</legend>
+			         	<input type="radio" name="number" id="1" value="dice = 1" checked="checked" />
+			         	<label for="1">1</label>
+
+			         	<input type="radio" name="number" id="2" value="dice = 2"  />
+			         	<label for="2">2</label>
+
+			         	<input type="radio" name="number" id="3" value="dice = 3"  />
+			         	<label for="3">3</label>
+
+			         	<input type="radio" name="number" id="4" value="dice = 4"  />
+			         	<label for="4">4</label>
+			
+			         	<input type="radio" name="number" id="5" value="dice = 5"  />
+			         	<label for="5">5</label>
+			
+			         	<input type="radio" name="number" id="6" value="dice = 6"  />
+			         	<label for="6">6</label>
+			    </fieldset>
+			</div>
+			<div data-role="none">
+				<input type="text" name=text>
+				<input type=button value="Roll Dice" name=button onclick="dice_roll(die, dice)">
+			</div>
+
+	
   </body>
 </html>
