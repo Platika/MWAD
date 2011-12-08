@@ -35,6 +35,24 @@
       </div><!-- /header -->
     </div><!-- /page -->
 
+<!--About Page-->
+	<div data-role="page" id="about">
+		<div data-role="header" data-theme="b">
+			<h1>About</h1>
+		</div>
+		
+	<div data-role="content"  data-theme="b">
+		<p>Hello World! This app is still in a super rough pre-beta shape. This is app is suppose to be a utility for all DnD players. It gives you the ability to have everything your campaign requires at the tip of your fingers. As of right now I have just placed some characters and items from my campaign as a place holder. Feel free to test it out and enjoy<p> 
+		</div>
+			
+       <div data-role="footer" data-theme="b">
+	     <h4>&copy;Platika 2011</h4>
+	     </div><!-- /header -->
+	     </div><!-- /page -->
+<!--End Of About Page-->
+
+<!--Character Page-->
+
     <div data-role="page" id="character">
       <div data-role="header" data-theme="b">
         <h1>Character</h1>
@@ -1715,7 +1733,9 @@
       	</div>
     </div><!-- /page -->
 
+<!--End of Party-->
 
+<!--Start of Encounter-->
 	<div data-role="page" id="mobs">
 	      <div data-role="header" data-theme="b">
 	        <h1>Encounters</h1>
@@ -1735,8 +1755,10 @@
 	        <h4>&copy;Platika 2011</h4>
 	      </div>
 	    </div><!-- /page -->
-	   
 	
+<!--End of Encounter-->
+
+<!--Start of Story-->
 	 <div data-role="page" id="story">
 	      <div data-role="header" data-theme="b">
 	        <h1>Story</h1>
@@ -1751,6 +1773,7 @@
 	        <h4>&copy;Platika 2011</h4>
 	      </div>
 	    </div><!-- /page -->
+<!--End of Story-->
 	    
 <!--Start of Maps-->
 	
@@ -1796,7 +1819,7 @@
 			<div data-role="fieldcontain">
 			    <fieldset data-role="controlgroup">
 			    	<legend>Choose Dice</legend>
-			         	<input type="radio" name="sides" id="D3" value="die = 3" checked="checked" />
+			         	<input type="radio" name="sides" id="D3" value="die = 3"  />
 			         	<label for="D3">D3</label>
 
 			         	<input type="radio" name="sides" id="D6" value="die = 6"  />
@@ -1818,7 +1841,7 @@
 			<div data-role="fieldcontain">
 			    <fieldset data-role="controlgroup">
 			    	<legend>Choose Number of Dice</legend>
-			         	<input type="radio" name="number" id="1" value="dice = 1" checked="checked" />
+			         	<input type="radio" name="number" id="1" value="dice = 1" />
 			         	<label for="1">1</label>
 
 			         	<input type="radio" name="number" id="2" value="dice = 2"  />
@@ -1839,9 +1862,118 @@
 			</div>
 			<div data-role="none">
 				<input type="text" name=text>
-				<input type=button value="Roll Dice" name=button onclick="dice_roll(die, dice)">
+				<input type="button" value="Roll Dice" name=button onpress="dice_roll(die, dice)">
 			</div>
+				<div data-role="footer" data-theme="b">
+					<h4>&copy; Platika 2011</h4>
+				</div>
+			</div><!-- /page -->
+<!--End of Dice Roller-->
 
-	
+<!--Start of Character Builder-->
+		
+		<div data-role="page" id="char_builder">
+			<div data-role="header" data-theme="b">
+				<h1>Character Builder</h1>
+			</div>
+			
+			<div data-role="fieldcontain">
+			<label for="name">Character Name</label>
+			<input type="text" name="cname" id="cname" value="" />
+			</div>
+			
+			<div data-role="fieldcontain">
+			<label for="name">Player Name</label>
+			<input type="text" name="pname" id="pname" value="" />
+			</div>
+			
+			<div data-role="fieldcontain">
+			   <label for="select-choice-1" class="select">Alignment</label>
+			   <select name="select-choice-1" id="alignment">
+			      <option value="lgood">Lawful Good</option>
+			      <option value="ngood">Neutral Good</option>
+				  <option value="cgood">Chaotic Good</option>
+			      <option value="lneutral">Lawful Neutral</option>
+			      <option value="neutral">Neutral</option>
+			      <option value="cneutral">Chaotic Neutral</option>
+				  <option value="cgood">Chaotic Good</option>
+				  <option value="levil">Lawful Evil</option>
+				  <option value="nevil">Neutral Evil</option>
+				  <option value="cevil">Chaotic Evil</option>
+			   </select>
+			</div>
+			
+			<div data-role="fieldcontain">
+			   <label for="select-choice-2" class="select">Race</label>
+			   <select name="select-choice-2" id="race">
+			      <option value="human">Human</option>
+			      <option value="halfling">Halfling</option>
+				  <option value="elf">Elf</option>
+			      <option value="dwarf">Dwarf</option>
+			      <option value="eladrin">Eladrin</option>
+			      <option value="gnome">Gnome</option>
+				  <option value="tiefling">Tiefling</option>
+				  <option value="half_elf">Half Elf</option>
+				  <option value="half_orc">Half Orc</option>
+				  <option value="dragonborn">Dragonborn</option>
+			   </select>
+			</div>
+			
+			<div data-role="fieldcontain">
+			   <label for="select-choice-3" class="select">Class</label>
+			   <select name="select-choice-3" id="class">
+			      <option value="cleric">Cleric</option>
+			      <option value="fighter">Fighter</option>
+				  <option value="paladin">Paladin</option>
+			      <option value="ranger">Ranger</option>
+			      <option value="rogue">Rogue</option>
+				  <option value="warlock">Warlock</option>
+				  <option value="wizard">Wizard</option>
+			   </select>
+			</div>
+			
+			<div data-role="fieldcontain">
+			   <label for="slider">Hit Points</label>
+			   <input type="range" name="slider" id="hp" value="25" min="0" max="100"  />
+			</div>
+			
+			<div data-role="fieldcontain">
+			   <label for="slider">Speed</label>
+			   <input type="range" name="slider" id="spd" value="3" min="0" max="10"  />
+			</div>
+			
+			<div data-role="fieldcontain">
+			   <label for="slider">STR</label>
+			   <input type="range" name="slider" id="str" value="10" min="0" max="40"  />
+			</div>
+			<div data-role="fieldcontain">
+			   <label for="slider">CON</label>
+			   <input type="range" name="slider" id="con" value="10" min="0" max="40"  />
+			</div>
+			<div data-role="fieldcontain">
+			   <label for="slider">DEX</label>
+			   <input type="range" name="slider" id="dex" value="10" min="0" max="40"  />
+			</div>
+			<div data-role="fieldcontain">
+			   <label for="slider">INT</label>
+			   <input type="range" name="slider" id="int" value="10" min="0" max="40"  />
+			</div>
+			<div data-role="fieldcontain">
+			   <label for="slider">WIS</label>
+			   <input type="range" name="slider" id="wis" value="10" min="0" max="40"  />
+			</div>
+			<div data-role="fieldcontain">
+			   <label for="slider">CHA</label>
+			   <input type="range" name="slider" id="cha" value="10" min="0" max="40"  />
+			</div>
+			
+			<div data-role="none">
+				<input type="button" value="Submit" name=button onclick="submit">
+			</div>
+		      <div data-role="footer" data-theme="b">
+		        <h4>&copy;Platika 2011</h4>
+		    </div><!-- /page -->
+		
+<!--End of Character Builder-->
   </body>
 </html>
